@@ -1,4 +1,4 @@
-import threading
+
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
@@ -121,7 +121,7 @@ class ToolHandoverNode(Node):
         class_ids = results[0].boxes.cls.cpu().numpy().astype(int)
 
         zc = 57.75 * 25.4
-        tw = 45.1875* 25.4#47.5 or47.4
+        tw = 45.1875* 25.4
         img_h, img_w = img.shape[:2]
         pxcenter = 621
         pycenter = 357.3
